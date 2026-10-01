@@ -3,33 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script>document.documentElement.classList.remove('no-js')</script>
-  <title>Tram Tram Milano — Fermata con cucina | Cucina romana in Via Lazzaretto 16</title>
+  <script>(function(){var r=document.documentElement;r.classList.remove('no-js');try{if(sessionStorage.getItem('tramtram-intro'))r.classList.add('intro-vista')}catch(e){}})()</script>
+  <title>Tram Tram Milano · Fermata con cucina romana a Porta Venezia</title>
   <meta name="robots" content="noindex">
-  <meta name="description" content="Tram Tram Milano, fermata con cucina: cucina casalinga con una forte anima romana in via Lazzaretto 16, Porta Venezia, Milano. Cacio e pepe, carbonara, polpo, carciofi; vini di piccoli produttori. A cena tutte le sere, a pranzo da martedì a sabato. Tel 02 2809 8058.">
-  <meta property="og:title" content="Tram Tram Milano — Fermata con cucina, Via Lazzaretto 16">
-  <meta property="og:description" content="Pochi piatti. Semplici. Buoni. Cucina casalinga con una forte anima romana in via Lazzaretto 16. Tel 02 2809 8058.">
+  <meta name="description" content="Ristorante in Via Lazzaretto 16, Porta Venezia: cucina casalinga dall’anima romana, cacio e pepe, carbonara, polpo, vini al calice. Tel. 02 2809 8058.">
+  <meta property="og:site_name" content="Tram Tram Milano">
+  <meta property="og:title" content="Tram Tram Milano · Fermata con cucina romana a Porta Venezia">
+  <meta property="og:description" content="«Pochi piatti. Semplici. Buoni.» Cucina casalinga dall’anima romana in Via Lazzaretto 16, Milano. Tel. 02 2809 8058.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="it_IT">
+  <meta property="og:locale:alternate" content="en_GB">
   <meta property="og:url" content="https://rotenzark.github.io/tram-tram-v2/">
   <meta property="og:image" content="https://rotenzark.github.io/tram-tram-v2/img/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="La vetrina di Tram Tram in Via Lazzaretto 16, con un tram giallo che passa davanti.">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://rotenzark.github.io/tram-tram-v2/">
   <meta name="theme-color" content="#F5EFE0">
   <link rel="icon" href="favicon.png?v=2" type="image/png">
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=3">
+  <link rel="preload" href="fonts/oswald-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/source-serif-4-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="fonts/fonts.css?v=1">
+  <link rel="stylesheet" href="css/style.css?v=4">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Restaurant",
+    "@id": "https://rotenzark.github.io/tram-tram-v2/#ristorante",
     "name": "Tram Tram",
     "alternateName": ["Tram Tram Milano", "Tram Tram. Fermata con cucina"],
     "legalName": "Tram Tram s.a.s. di Francesco d'Argenzio & C.",
-    "vatID": "IT10469840960",
+    "vatID": "10469840960",
     "description": "Fermata con cucina nel quartiere Porta Venezia a Milano: cucina casalinga con una forte anima romana, menù stagionale, vini di piccoli produttori italiani.",
     "telephone": "+390228098058",
     "servesCuisine": ["Cucina romana", "Cucina italiana"],
@@ -46,13 +52,14 @@
       "addressRegion": "MI",
       "addressCountry": "IT"
     },
+    "menu": "https://rotenzark.github.io/tram-tram-v2/#menu",
+    "acceptsReservations": true,
     "hasMap": "https://www.google.com/maps/search/?api=1&query=Tram+Tram%2C+Via+Lazzaretto+16%2C+20124+Milano",
     "sameAs": ["https://www.instagram.com/tramtrammilano/", "https://www.facebook.com/tramtrammilano"],
     "openingHoursSpecification": [
       { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "12:00", "closes": "14:30" },
       { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "18:00", "closes": "23:59" }
-    ],
-    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.5", "reviewCount": "465", "bestRating": "5" }
+    ]
   }
   </script>
 </head>
@@ -114,7 +121,7 @@
           <a class="btn btn-giallo" href="tel:+390228098058"><span data-i18n="call_cta">Chiama</span>&nbsp;· 02 2809 8058</a>
           <a class="btn btn-ghost" href="#menu" data-i18n="see_menu">Guarda il menù</a>
         </div>
-        <p class="hero-proof" data-i18n="hero_proof">4,5 su Google · 465 recensioni</p>
+        <p class="hero-proof" data-i18n="hero_proof">4,5 su Google · oltre 450 recensioni</p>
       </div>
     </section>
 
@@ -130,17 +137,17 @@
           <p data-i18n="kitchen_p1">Il padrone di casa è Francesco d’Argenzio, socio fondatore: romano, con un passato da regista, a Milano da anni. La sua passione per il cibo e la musica è diventata una realtà, ed è l’essenza di questo locale.</p>
           <blockquote class="voce">
             <p data-i18n="kitchen_quote">«Cucinare è quasi come fare la regia. Devi dirigere gli ingredienti e i sapori per preparare un piatto ben riuscito.»</p>
-            <footer data-i18n="kitchen_quote_by">Francesco d’Argenzio, a La Cucina Italiana</footer>
+            <footer data-i18n="kitchen_quote_by">Francesco d’Argenzio, a La Cucina Italiana, 2020</footer>
           </blockquote>
           <p data-i18n="kitchen_p2">In tavola, fermata dopo fermata: la pappa al pomodoro, i tonnarelli cacio e pepe, i carciofi quando è stagione. Il menù cambia con le stagioni.</p>
         </div>
         <aside class="split-side">
           <div class="stat">
-            <span class="stat-num">4,5</span>
-            <span class="stat-label" data-i18n="stat1">su Google, in 465 recensioni</span>
+            <span class="stat-num" data-i18n="voto_num">4,5</span>
+            <span class="stat-label" data-i18n="stat1">su Google, oltre 450 recensioni</span>
           </div>
           <div class="stat">
-            <span class="stat-num">7/7</span>
+            <span class="stat-num" data-i18n="stat2_num">7/7</span>
             <span class="stat-label" data-i18n="stat2">a cena tutte le sere; a pranzo da martedì a sabato</span>
           </div>
           <div class="stat">
@@ -150,7 +157,7 @@
         </aside>
       </div>
       <figure class="dish dish-largo">
-        <img src="img/tram-vetrina.jpg" width="1200" height="800" alt="La vetrina di Tram Tram in via Lazzaretto 16, con l'insegna «Tram Tram · Fermata con cucina», mentre davanti passa un tram giallo." data-i18n-alt="alt_vetrina">
+        <picture><source type="image/webp" srcset="img/w/tram-vetrina-480.webp 480w, img/w/tram-vetrina-800.webp 800w, img/w/tram-vetrina-1200.webp 1200w" sizes="(max-width: 1184px) 92vw, 1120px"><img decoding="async" src="img/tram-vetrina.jpg" width="1200" height="800" alt="La vetrina di Tram Tram in via Lazzaretto 16, con l'insegna «Tram Tram · Fermata con cucina», mentre davanti passa un tram giallo." data-i18n-alt="alt_vetrina"></picture>
         <figcaption class="dish-caption" data-i18n="cap_vetrina">Via Lazzaretto 16: davanti alla vetrina passa il tram.</figcaption>
       </figure>
     </section>
@@ -178,7 +185,7 @@
         <li class="ledger-row"><span class="ledger-name" data-i18n="m10">Puntarelle, cicoria</span><span class="ledger-dots" aria-hidden="true"></span><span class="ledger-price" data-i18n="c_verdure">verdure</span></li>
         <li class="ledger-row"><span class="ledger-name" data-i18n="m11">Crostata di ricotta e visciole</span><span class="ledger-dots" aria-hidden="true"></span><span class="ledger-price" data-i18n="c_dolce">dolce</span></li>
       </ul>
-      <p class="ledger-note" data-i18n="menu_note">Il menù è stagionale e cambia spesso: questi sono i piatti della casa e quelli che i nostri ospiti citano di più. Il menù di oggi è sul nostro Instagram, oppure con una telefonata.</p>
+      <p class="ledger-note" data-i18n="menu_note">Il menù è stagionale e cambia spesso: questi sono i piatti della casa e quelli che i nostri ospiti citano di più. Le novità le pubblichiamo su Instagram; per il menù del giorno, una telefonata.</p>
     </section>
 
     <div class="board board-divider" aria-hidden="true">
@@ -197,7 +204,8 @@
           <p data-i18n="wine_p1">E una scelta di cocktail di base e di birre, da gustare da noi accompagnati da un piatto di degustazione: per l’aperitivo, prima di cena o al posto della cena. Ci sono anche i vini al calice: chiedete a chi vi serve cosa c’è oggi.</p>
         </div>
         <figure class="dish dish-alto">
-          <img src="img/calici.jpg" width="900" height="1350" alt="Due calici di vino rosso alzati per un brindisi sopra un tavolo di legno." data-i18n-alt="alt_calici">
+          <picture><source type="image/webp" srcset="img/w/calici-480.webp 480w, img/w/calici-800.webp 800w, img/w/calici-900.webp 900w" sizes="(max-width: 900px) 92vw, 410px"><img decoding="async" src="img/calici.jpg" width="900" height="1350" alt="Due calici di vino rosso alzati per un brindisi sopra un tavolo di legno." data-i18n-alt="alt_calici"></picture>
+          <figcaption class="dish-caption" data-i18n="cap_calici">Un brindisi — fotografia di Lucila Blumencweig</figcaption>
         </figure>
       </div>
     </section>
@@ -213,18 +221,18 @@
         <h2 data-i18n="table_title">In tavola</h2>
       </div>
       <figure class="dish">
-        <img src="img/cacio-pepe.jpg" width="1024" height="683" alt="I tonnarelli cacio e pepe di Tram Tram, serviti nel piatto fondo" data-i18n-alt="alt1">
+        <picture><source type="image/webp" srcset="img/w/cacio-pepe-480.webp 480w, img/w/cacio-pepe-800.webp 800w, img/w/cacio-pepe-1024.webp 1024w" sizes="(max-width: 1184px) 92vw, 1120px"><img decoding="async" src="img/cacio-pepe.jpg" width="1024" height="683" alt="I tonnarelli cacio e pepe di Tram Tram, serviti nel piatto fondo" data-i18n-alt="alt1"></picture>
         <figcaption class="dish-caption" data-i18n="dish_caption">I tonnarelli cacio e pepe — fotografia di Liana Solis, dal servizio del ristorante.</figcaption>
       </figure>
       <div class="galleria">
-        <figure class="g-foto"><img src="img/carciofo.jpg" width="900" height="1200" alt="Un carciofo alla romana col gambo, nel piatto bianco." data-i18n-alt="alt_carciofo"><figcaption data-i18n="cap_carciofo">Il carciofo, quando è stagione</figcaption></figure>
-        <figure class="g-foto"><img src="img/vongole.jpg" width="1200" height="900" alt="Un piatto di spaghetti alle vongole." data-i18n-alt="alt_vongole"><figcaption data-i18n="cap_vongole">Spaghetti alle vongole</figcaption></figure>
-        <figure class="g-foto"><img src="img/tartare.jpg" width="461" height="615" alt="Una tartare col tuorlo d'uovo, nel piatto bianco." data-i18n-alt="alt_tartare"><figcaption data-i18n="cap_tartare">La tartare</figcaption></figure>
-        <figure class="g-foto"><img src="img/secondo.jpg" width="900" height="1147" alt="Un secondo di carne sul purè, col cavolo rosso e il fondo di cottura." data-i18n-alt="alt_secondo"><figcaption data-i18n="cap_secondo">Un secondo, col purè</figcaption></figure>
-        <figure class="g-foto"><img src="img/crema.jpg" width="900" height="1200" alt="Una crème brûlée in una cocotte bianca, portata in mano." data-i18n-alt="alt_crema"><figcaption data-i18n="cap_crema">La crème brûlée</figcaption></figure>
-        <figure class="g-foto"><img src="img/tavolo.jpg" width="1600" height="1067" alt="I tavoli di legno contro la parete blu, coi calici pronti." data-i18n-alt="alt_tavolo"><figcaption data-i18n="cap_tavolo">I tavoli, pronti per la sera</figcaption></figure>
+        <figure class="g-foto"><picture><source type="image/webp" srcset="img/w/carciofo-480.webp 480w, img/w/carciofo-800.webp 800w, img/w/carciofo-900.webp 900w" sizes="(max-width: 860px) 45vw, 370px"><img decoding="async" src="img/carciofo.jpg" width="900" height="1200" alt="Un carciofo alla romana col gambo, nel piatto bianco." data-i18n-alt="alt_carciofo"></picture><figcaption data-i18n="cap_carciofo">Il carciofo, quando è stagione</figcaption></figure>
+        <figure class="g-foto"><picture><source type="image/webp" srcset="img/w/vongole-480.webp 480w, img/w/vongole-800.webp 800w, img/w/vongole-1200.webp 1200w" sizes="(max-width: 860px) 45vw, 370px"><img decoding="async" src="img/vongole.jpg" width="1200" height="900" alt="Un piatto di spaghetti alle vongole." data-i18n-alt="alt_vongole"></picture><figcaption data-i18n="cap_vongole">Spaghetti alle vongole</figcaption></figure>
+        <figure class="g-foto"><picture><source type="image/webp" srcset="img/w/tartare-461.webp 461w" sizes="(max-width: 860px) 45vw, 370px"><img decoding="async" src="img/tartare.jpg" width="461" height="615" alt="Una tartare col tuorlo d'uovo, nel piatto bianco." data-i18n-alt="alt_tartare"></picture><figcaption data-i18n="cap_tartare">La tartare</figcaption></figure>
+        <figure class="g-foto"><picture><source type="image/webp" srcset="img/w/secondo-480.webp 480w, img/w/secondo-800.webp 800w, img/w/secondo-900.webp 900w" sizes="(max-width: 860px) 45vw, 370px"><img decoding="async" src="img/secondo.jpg" width="900" height="1147" alt="Un secondo di carne sul purè, col cavolo rosso e il fondo di cottura." data-i18n-alt="alt_secondo"></picture><figcaption data-i18n="cap_secondo">Un secondo, col purè</figcaption></figure>
+        <figure class="g-foto"><picture><source type="image/webp" srcset="img/w/crema-480.webp 480w, img/w/crema-800.webp 800w, img/w/crema-900.webp 900w" sizes="(max-width: 860px) 45vw, 370px"><img decoding="async" src="img/crema.jpg" width="900" height="1200" alt="Una crème brûlée in una cocotte bianca, portata in mano." data-i18n-alt="alt_crema"></picture><figcaption data-i18n="cap_crema">La crème brûlée</figcaption></figure>
+        <figure class="g-foto"><picture><source type="image/webp" srcset="img/w/tavolo-480.webp 480w, img/w/tavolo-800.webp 800w, img/w/tavolo-1200.webp 1200w, img/w/tavolo-1600.webp 1600w" sizes="(max-width: 860px) 45vw, 370px"><img decoding="async" src="img/tavolo.jpg" width="1600" height="1067" alt="I tavoli di legno contro la parete blu, coi calici pronti." data-i18n-alt="alt_tavolo"></picture><figcaption data-i18n="cap_tavolo">La tavolata contro la parete blu</figcaption></figure>
       </div>
-      <p class="gallery-note" data-i18n="g_note">Le foto sono nostre; quella delle vongole è di un’ospite, dalla sua recensione su Google.</p>
+      <p class="gallery-note" data-i18n="g_note">Foto di Liana Solis (la cacio e pepe, la tavolata) e di Tram Tram; quella degli spaghetti alle vongole viene dalla recensione di Désirée su Google.</p>
     </section>
 
     <div class="board board-divider" aria-hidden="true">
@@ -241,16 +249,16 @@
         <div class="split-main">
           <p class="pull" data-i18n="room_pull">Un po’ bar, un po’ vineria, un po’ osteria, molto casa.</p>
           <p data-i18n="room_p1">Mobili antichi e pezzi vintage, libri, luci calde; alle pareti le opere di amici e vicini di quartiere, e ogni tanto una piccola mostra o una serata di musica. Fuori, sul marciapiede, pochi tavoli tra le piante e le lucine.</p>
-          <p data-i18n="room_p2">In sala c’è anche una selezione di oggetti per la tavola: molti pezzi unici, fatti a mano da artigiani italiani oppure vintage, come gli orci di terracotta di Molfetta Frantoiani decorati a mano con oro, le tovagliette a crochet, i piatti di ceramica dipinti a mano.</p>
+          <p data-i18n="room_p2">In sala c’è anche una selezione di oggetti per la tavola: molti pezzi unici, fatti a mano da artigiani italiani oppure vintage, come gli orci di terracotta con l’olio extravergine di Di Molfetta Frantoiani, decorati a mano in oro, le tovagliette a crochet, i piatti di ceramica dipinti a mano.</p>
           <p data-i18n="room_p3">Il locale è raccolto: la sera e nel fine settimana conviene prenotare, al telefono. Per una tavolata, chiamateci prima.</p>
         </div>
         <figure class="dish dish-alto">
-          <img src="img/fuori.jpg" width="900" height="1311" alt="Il marciapiede davanti a Tram Tram: le piante in vaso, una bicicletta rossa, un tavolino." data-i18n-alt="alt_fuori">
+          <picture><source type="image/webp" srcset="img/w/fuori-480.webp 480w, img/w/fuori-800.webp 800w, img/w/fuori-900.webp 900w" sizes="(max-width: 900px) 92vw, 410px"><img decoding="async" src="img/fuori.jpg" width="900" height="1311" alt="Il marciapiede davanti a Tram Tram: le piante in vaso, una bicicletta rossa, un tavolino." data-i18n-alt="alt_fuori"></picture>
         </figure>
       </div>
       <div class="galleria galleria-due">
-        <figure class="g-foto"><img src="img/sala.jpg" width="1600" height="1296" alt="La sala: il bancone in ottone con gli sgabelli, le lanterne di carta, la specchiera di legno e i grandi disegni alle pareti." data-i18n-alt="alt_sala"><figcaption data-i18n="cap_sala">La sala — fotografia di Lucila Blumencweig</figcaption></figure>
-        <figure class="g-foto"><img src="img/bancone.jpg" width="1600" height="1067" alt="Il bancone e il fondo della sala, con le nicchie e le lanterne." data-i18n-alt="alt_bancone"><figcaption data-i18n="cap_bancone">Il bancone</figcaption></figure>
+        <figure class="g-foto"><picture><source type="image/webp" srcset="img/w/sala-480.webp 480w, img/w/sala-800.webp 800w, img/w/sala-1200.webp 1200w, img/w/sala-1600.webp 1600w" sizes="(max-width: 860px) 92vw, 555px"><img decoding="async" src="img/sala.jpg" width="1600" height="1296" alt="La sala: il bancone in ottone con gli sgabelli, le lanterne di carta, la specchiera di legno e i grandi disegni alle pareti." data-i18n-alt="alt_sala"></picture><figcaption data-i18n="cap_sala">La sala — fotografia di Lucila Blumencweig</figcaption></figure>
+        <figure class="g-foto"><picture><source type="image/webp" srcset="img/w/bancone-480.webp 480w, img/w/bancone-800.webp 800w, img/w/bancone-1200.webp 1200w, img/w/bancone-1600.webp 1600w" sizes="(max-width: 860px) 92vw, 555px"><img decoding="async" src="img/bancone.jpg" width="1600" height="1067" alt="Il bancone e il fondo della sala, con le nicchie e le lanterne." data-i18n-alt="alt_bancone"></picture><figcaption data-i18n="cap_bancone">Il bancone — fotografia di Lucila Blumencweig</figcaption></figure>
       </div>
     </section>
 
@@ -268,16 +276,16 @@
         <p data-i18n="press_quote">«Prendere il tram a Milano e fermarsi per un attimo a Roma.»</p>
         <footer data-i18n="press_by">La Cucina Italiana, 22 ottobre 2020</footer>
       </blockquote>
-      <p class="voto"><span class="stat-num">4,5</span> <span class="stat-label" data-i18n="rev_rating">su Google, in 465 recensioni</span></p>
-      <ul class="recensioni">
-        <li class="recensione"><p class="recensione-testo">«Un piccolo gioiello in una Milano sempre più di corsa. Il locale è super accogliente, dall’arredamento, alle luci, alla cortesia del personale. Ci siamo sentite a casa; […] E il calice di vino è finalmente un calice serio non un assaggino.»</p><p class="recensione-chi">Désirée · <span data-i18n="g26">Google, 2026</span></p></li>
-        <li class="recensione"><p class="recensione-testo">«Uno dei miei ristoranti preferiti a Milano: cibo sempre squisito (cucina romanesca) in buone porzioni non risicate (specialmente i primi piatti); servizio gentile e discreto in un ambiente elegante, rustico e chic insieme.»</p><p class="recensione-chi">Alessandra I. · <span data-i18n="g25">Google, 2025</span></p></li>
-        <li class="recensione"><p class="recensione-testo">«Quasi come a casa (ma meglio, perché è più bello!) […] Cucina di forte ispirazione romana (il baccalà fritto è spettacolare) e personale sempre gentile.»</p><p class="recensione-chi">Paola G. · <span data-i18n="g22">Google, 2022</span></p></li>
-        <li class="recensione"><p class="recensione-testo">«Locale molto gradevole con primi piatti della cucina romana leggermente rivisitati, ottima la scelta dei vini alla mescita […] provato sia a pranzo che a cena, consigliato.»</p><p class="recensione-chi">Morena T. · <span data-i18n="g24">Google, 2024</span></p></li>
-        <li class="recensione"><p class="recensione-testo">«Squisito ristorante in stile Liberty con menù italiano di ispirazione romana, benché anche la cotoletta milanese fosse ottima. Personale gentile e interni piacevolissimi»</p><p class="recensione-chi">Elisabetta S. · <span data-i18n="g25">Google, 2025</span></p></li>
-        <li class="recensione"><p class="recensione-testo">«Locale carinissimo ed intimo, consigliato per aperitivo o cena. Ottima scelta di vini, personale attento e gentile.»</p><p class="recensione-chi">Ilaria R. · <span data-i18n="g25">Google, 2025</span></p></li>
+      <p class="voto"><span class="stat-num" data-i18n="voto_num">4,5</span> <span class="stat-label" data-i18n="rev_rating">su Google, oltre 450 recensioni</span></p>
+      <ul class="recensioni" lang="it">
+        <li class="recensione"><p class="recensione-testo">«Un piccolo gioiello in una Milano sempre più di corsa. Il locale è super accogliente, dall’arredamento, alle luci, alla cortesia del personale. Ci siamo sentite a casa; […] E il calice di vino è finalmente un calice serio non un assaggino.»</p><p class="recensione-chi">Désirée · <span data-i18n="g_src">Google</span></p></li>
+        <li class="recensione"><p class="recensione-testo">«Uno dei miei ristoranti preferiti a Milano: cibo sempre squisito (cucina romanesca) in buone porzioni non risicate (specialmente i primi piatti); servizio gentile e discreto in un ambiente elegante, rustico e chic insieme.»</p><p class="recensione-chi">Alessandra I. · <span data-i18n="g_src">Google</span></p></li>
+        <li class="recensione"><p class="recensione-testo">«Quasi come a casa (ma meglio, perché è più bello!) […] Cucina di forte ispirazione romana (il baccalà fritto è spettacolare) e personale sempre gentile. Adesso hanno anche una saletta, molto carina per tavolate più ampie.»</p><p class="recensione-chi">Paola G. · <span data-i18n="g_src">Google</span></p></li>
+        <li class="recensione"><p class="recensione-testo">«Locale molto gradevole con primi piatti della cucina romana leggermente rivisitati, ottima la scelta dei vini alla mescita […] provato sia a pranzo che a cena, consigliato.»</p><p class="recensione-chi">Morena T. · <span data-i18n="g_src">Google</span></p></li>
+        <li class="recensione"><p class="recensione-testo">«Squisito ristorante in stile Liberty con menù italiano di ispirazione romana, benché anche la cotoletta milanese fosse ottima. Personale gentile e interni piacevolissimi»</p><p class="recensione-chi">Elisabetta S. · <span data-i18n="g_src">Google</span></p></li>
+        <li class="recensione"><p class="recensione-testo">«Locale carinissimo ed intimo, consigliato per aperitivo o cena. Ottima scelta di vini, personale attento e gentile.»</p><p class="recensione-chi">Ilaria R. · <span data-i18n="g_src">Google</span></p></li>
       </ul>
-      <p class="ledger-note" data-i18n="rev_note">Dalle recensioni su Google, come sono state scritte.</p>
+      <p class="ledger-note" data-i18n="rev_note">Una selezione dalle recensioni su Google. I tagli sono segnati con […]; per il resto sono come le hanno scritte, a parte qualche spazio di troppo.</p>
     </section>
 
     <div class="board board-divider" aria-hidden="true">
@@ -300,15 +308,15 @@
               <tr><th scope="row" data-i18n="sun_mon">Domenica e lunedì, a cena</th><td>18:00 – 24:00</td></tr>
             </tbody>
           </table>
-          <p class="hours-note" data-i18n="hours_note">A cena tutte le sere, a pranzo da martedì a sabato. In agosto chiudiamo per le vacanze: le date sono sul nostro Instagram. La sera e nel fine settimana meglio prenotare: si fa presto, al telefono.</p>
+          <p class="hours-note" data-i18n="hours_note">A cena tutte le sere, a pranzo da martedì a sabato. Ad agosto chiudiamo per qualche settimana: lo annunciamo su Instagram. La sera e nel fine settimana meglio prenotare: si fa presto, al telefono.</p>
         </div>
         <div class="where">
           <address class="where-address">
             Via Lazzaretto 16<br>
             20124 Milano — Porta Venezia
           </address>
-          <p class="where-metro"><span class="metro-dot m3-dot" aria-hidden="true"></span><span class="metro-dot" aria-hidden="true"></span> <span data-i18n="metro">M3 Repubblica e M1 Porta Venezia, a pochi minuti a piedi</span></p>
-          <p class="where-metro"><span class="metro-dot tram-dot" aria-hidden="true"></span> <span data-i18n="tram">In via Lazzaretto passa il tram: lo vedete dalla vetrina</span></p>
+          <p class="where-metro"><span class="metro-dot m3-dot" aria-hidden="true"></span><span class="metro-dot" aria-hidden="true"></span> <span data-i18n="metro">M3 Repubblica 6 minuti · Stazione Centrale 7 · M1 Porta Venezia 8, a piedi</span></p>
+          <p class="where-metro"><span class="metro-dot tram-dot" aria-hidden="true"></span> <span data-i18n="tram">Tram 1: fermata Piazza Cincinnato, a due passi dalla vetrina</span></p>
           <div class="where-azioni">
             <a class="btn btn-giallo" href="tel:+390228098058"><span data-i18n="call_cta">Chiama</span>&nbsp;· 02 2809 8058</a>
             <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=Tram+Tram%2C+Via+Lazzaretto+16%2C+20124+Milano" target="_blank" rel="noopener" data-i18n="maps">Indicazioni</a>
@@ -317,10 +325,14 @@
       </div>
       <div class="mappa-riga">
         <figure class="dish">
-          <img src="img/facciata.jpg" width="1017" height="645" alt="La facciata di Tram Tram in via Lazzaretto 16: tre vetrine con l'insegna e le piante sul marciapiede." data-i18n-alt="alt_facciata">
+          <picture><source type="image/webp" srcset="img/w/facciata-480.webp 480w, img/w/facciata-800.webp 800w, img/w/facciata-1017.webp 1017w" sizes="(max-width: 860px) 92vw, 555px"><img decoding="async" src="img/facciata.jpg" width="1017" height="645" alt="La facciata di Tram Tram in via Lazzaretto 16: tre vetrine con l'insegna e le piante sul marciapiede." data-i18n-alt="alt_facciata"></picture>
         </figure>
-        <div class="cartina">
-          <iframe title="Mappa: Tram Tram, Via Lazzaretto 16, Milano" data-i18n-title="map_title" src="https://maps.google.com/maps?q=Tram%20Tram%2C%20Via%20Lazzaretto%2016%2C%2020124%20Milano&amp;z=16&amp;output=embed" width="600" height="400" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="cartina" data-mappa="https://www.google.com/maps?q=Tram%20Tram%2C%20Via%20Lazzaretto%2016%2C%2020124%20Milano&amp;z=16&amp;output=embed">
+          <div class="cartina-velo">
+            <p class="cartina-indirizzo">Via Lazzaretto 16</p>
+            <a class="btn btn-giallo cartina-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Tram+Tram%2C+Via+Lazzaretto+16%2C+20124+Milano" data-i18n="map_btn">Mostra la mappa</a>
+            <p class="cartina-nota" data-i18n="map_note">La mappa è di Google: aprendola qui, Google riceve il tuo indirizzo IP e può usare i suoi cookie.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -330,7 +342,7 @@
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
     <img class="footer-tram" src="img/logo-tram-crema.png" width="240" height="143" alt="">
-    <p class="footer-wordmark" aria-hidden="true">Tram Tram</p>
+    <div class="footer-wordmark" aria-hidden="true"></div>
     <div class="footer-cols">
       <div>
         <h3 data-i18n="f_contacts">Contatti</h3>
@@ -346,9 +358,9 @@
         <p data-i18n="f_line">A cena tutte le sere, a pranzo da martedì a sabato.</p>
       </div>
     </div>
-    <p class="footer-legal">© <span data-current-year>2026</span> Tram Tram s.a.s. di Francesco d’Argenzio &amp; C. · <span data-i18n="piva">P.IVA e C.F.</span> 10469840960 · REA MI-2533967 · Via Lazzaretto 16, 20124 Milano</p>
+    <p class="footer-legal">© <span data-current-year>2026</span> Tram Tram s.a.s. di Francesco d’Argenzio &amp; C. · <span data-i18n="piva">P.IVA e C.F.</span> 10469840960 · REA MI-2533967 · Via Lazzaretto 16, 20124 Milano · <a href="privacy.html" data-i18n="f_privacy">Privacy e cookie</a></p>
   </footer>
 
-  <script src="js/main.js?v=4"></script>
+  <script src="js/main.js?v=5"></script>
 </body>
 </html>

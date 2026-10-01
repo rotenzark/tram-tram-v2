@@ -78,9 +78,10 @@ a { color: inherit; }
   inset: 0;
   z-index: 300;
   /* rete di sicurezza: se main.js non arriva, l'intro se ne va da sola */
-  animation: intro-sicura 0s linear 6s forwards;
+  animation: intro-sicura 0s linear 3s forwards;
 }
-.no-js .intro { display: none; }
+.no-js .intro,
+.intro-vista .intro { display: none; } /* intro-vista: già vista in questa sessione (script nella testa) */
 @keyframes intro-sicura {
   to { opacity: 0; visibility: hidden; pointer-events: none; }
 }
@@ -134,7 +135,7 @@ body.intro-lock { overflow: hidden; }
   color: var(--giallo);
   transform: rotateX(-92deg);
   opacity: 0;
-  animation: flap-in 0.42s cubic-bezier(0.3, 0.9, 0.4, 1.08) forwards;
+  animation: flap-in 0.32s cubic-bezier(0.3, 0.9, 0.4, 1.08) forwards;
 }
 .flap::after {
   content: "";
@@ -146,15 +147,16 @@ body.intro-lock { overflow: hidden; }
 .flap-space { background: transparent; }
 .flap-space::after { display: none; }
 
-.flap:nth-child(1) { animation-delay: 0.12s; }
-.flap:nth-child(2) { animation-delay: 0.20s; }
-.flap:nth-child(3) { animation-delay: 0.28s; }
-.flap:nth-child(4) { animation-delay: 0.36s; }
-.flap:nth-child(5) { animation-delay: 0.44s; }
-.flap:nth-child(6) { animation-delay: 0.52s; }
-.flap:nth-child(7) { animation-delay: 0.60s; }
-.flap:nth-child(8) { animation-delay: 0.68s; }
-.flap:nth-child(9) { animation-delay: 0.76s; }
+/* intro accorciata (audit 1/10): le palette in 0,4 s, le porte a 1 s, fine a 1,7 s */
+.flap:nth-child(1) { animation-delay: 0.06s; }
+.flap:nth-child(2) { animation-delay: 0.10s; }
+.flap:nth-child(3) { animation-delay: 0.14s; }
+.flap:nth-child(4) { animation-delay: 0.18s; }
+.flap:nth-child(5) { animation-delay: 0.22s; }
+.flap:nth-child(6) { animation-delay: 0.26s; }
+.flap:nth-child(7) { animation-delay: 0.30s; }
+.flap:nth-child(8) { animation-delay: 0.34s; }
+.flap:nth-child(9) { animation-delay: 0.38s; }
 
 @keyframes flap-in {
   to { transform: rotateX(0); opacity: 1; }
@@ -167,7 +169,7 @@ body.intro-lock { overflow: hidden; }
   letter-spacing: 0.18em;
   color: var(--giallo);
   opacity: 0;
-  animation: dest-in 0.4s ease 1.05s forwards;
+  animation: dest-in 0.3s ease 0.6s forwards;
 }
 @keyframes dest-in {
   to { opacity: 0.95; }
@@ -177,6 +179,11 @@ body.intro-lock { overflow: hidden; }
 .has-intro .hero-inner {
   opacity: 0;
   transform: translateY(16px);
+  /* rete di sicurezza: l'hero non resta mai invisibile, anche se intro-done non arriva */
+  animation: hero-sicuro 0s linear 3s forwards;
+}
+@keyframes hero-sicuro {
+  to { opacity: 1; transform: none; }
 }
 .intro-done .hero-inner {
   opacity: 1;
@@ -263,7 +270,13 @@ body.intro-lock { overflow: hidden; }
   cursor: pointer;
   padding: 6px 8px;
 }
-.lang-btn.is-active { color: var(--rosso-sugo); }
+/* la lingua attiva non si riconosce solo dal colore (WCAG 1.4.1): sottolineata */
+.lang-btn.is-active {
+  color: var(--rosso-sugo);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
 .lang-btn:hover { color: var(--inchiostro); }
 .lang-sep { color: rgba(33, 29, 24, 0.3); }
 
@@ -538,30 +551,7 @@ body.intro-lock { overflow: hidden; }
   color: var(--grigio-caldo);
 }
 
-.gallery-attesa {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-  margin-top: 24px;
-}
-
-.g-slot {
-  aspect-ratio: 3 / 2;
-  border: 2px dashed rgba(33, 29, 24, 0.3);
-  border-radius: 6px;
-  background:
-    repeating-linear-gradient(90deg,
-      rgba(33, 29, 24, 0.04) 0 2px,
-      transparent 2px 18px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.g-fork {
-  font-family: var(--f-board);
-  font-size: 26px;
-  color: rgba(33, 29, 24, 0.3);
-}
+picture { display: block; }
 
 .gallery-note {
   margin-top: 14px;
@@ -641,6 +631,8 @@ body.intro-lock { overflow: hidden; }
   margin-right: auto;
 }
 
+/* filigrana decorativa: il testo sta nel ::before (aria-hidden, esente da 1.4.3 come logotipo), così i misuratori di contrasto non la leggono come testo */
+.footer-wordmark::before { content: "Tram Tram"; }
 .footer-wordmark {
   font-family: var(--f-board);
   font-size: clamp(52px, 9vw, 116px);
@@ -846,6 +838,37 @@ body.intro-lock { overflow: hidden; }
   height: 100%;
   border: 0;
 }
+/* prima del clic: un cartello con l'indirizzo e il bottone, nessuna richiesta a Google */
+.cartina-velo {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 24px;
+  text-align: center;
+  background:
+    repeating-linear-gradient(0deg, rgba(33, 29, 24, 0.05) 0 1px, transparent 1px 28px),
+    repeating-linear-gradient(90deg, rgba(33, 29, 24, 0.05) 0 1px, transparent 1px 28px),
+    var(--crema-scura);
+}
+.cartina-indirizzo {
+  font-family: var(--f-board);
+  font-size: clamp(22px, 2.6vw, 28px);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.cartina-nota {
+  max-width: 34ch;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--grigio-caldo);
+}
+
+.footer-legal a { color: inherit; }
 
 /* ============ REVEAL ============ */
 
@@ -933,8 +956,12 @@ body.intro-lock { overflow: hidden; }
   .hero .board { white-space: normal; align-items: flex-start; }
   .hero .board-text { line-height: 1.5; text-wrap: balance; }
 
-  .gallery-attesa { grid-template-columns: 1fr; }
-  .g-slot { aspect-ratio: 21 / 9; }
+  /* menu aperto: mai più alto dello schermo (telefono in orizzontale, zoom forte) */
+  .nav.is-open .nav-menu { max-height: calc(100vh - 130px); max-height: calc(100dvh - 130px); overflow-y: auto; }
+  /* senza JavaScript il bottone Menu non fa nulla: le voci restano in vista */
+  .no-js .nav-toggle { display: none; }
+  .no-js .nav-menu { display: flex; flex-direction: row; flex-wrap: wrap; gap: 4px 16px; }
+  .no-js .nav-menu a { border-bottom: 0; }
 
   .galleria { grid-template-columns: 1fr 1fr; gap: 12px; }
   .galleria-due,
@@ -948,4 +975,54 @@ body.intro-lock { overflow: hidden; }
 /* sul telefono stretto il tram nella testata manda a capo lingua e «Chiama»: resta nel footer e nell'icona */
 @media (max-width: 430px) {
   .wordmark-tram { display: none; }
+}
+
+/* ============ PAGINA PRIVACY ============ */
+.pagina-testo .topbar-actions { margin-left: auto; }
+.testo-legale { max-width: 760px; margin: 0 auto; }
+.testo-legale > * { max-width: none; }
+.testo-legale h1 {
+  font-family: var(--f-board);
+  font-size: clamp(34px, 5vw, 52px);
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+.testo-legale h2 {
+  font-family: var(--f-board);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 2em 0 0.5em;
+}
+.testo-legale p, .testo-legale li { color: var(--inchiostro); }
+.testo-legale p + p { margin-top: 0.8em; }
+.testo-legale ul { margin: 0.6em 0 0.8em 1.2em; }
+.testo-legale li + li { margin-top: 0.4em; }
+.testo-data { font-size: 15px; font-style: italic; color: var(--grigio-caldo) !important; }
+.testo-en { margin-top: 3em; padding-top: 1.5em; border-top: 2px solid rgba(33, 29, 24, 0.15); }
+
+/* senza JavaScript il cambio lingua non funziona: non lo mostro */
+.no-js .lang-switch { display: none; }
+
+/* ============ STAMPA / PDF ============ */
+@media print {
+  .reveal { opacity: 1 !important; transform: none !important; }
+  .intro, .skip-link, .nav, .topbar-actions, .hero-cta, .where-azioni, .cartina, .board-divider { display: none !important; }
+  .topbar { position: static; border-bottom: 1px solid #000; background: #fff; }
+  body { background: #fff; color: #000; font-size: 11pt; }
+  .section, .section-crema { background: #fff; padding: 18pt 0; }
+  .hero { min-height: 0; }
+  .board { background: #fff; border: 1px solid #000; }
+  .board-text, .board-arrow { color: #000; }
+  .stampa { background: #fff; border: 1px solid #000; }
+  .stampa p, .stampa footer { color: #000; }
+  .footer { background: #fff; color: #000; border-top: 1px solid #000; }
+  .footer-wordmark { display: none; }
+  .footer-tram { filter: invert(1); }
+  .footer-cols p, .footer-cols a, .footer-legal { color: #000; }
+  .footer-cols h3 { color: #000; }
+  figure, .recensione, .ledger-row, .hours-table tr { break-inside: avoid; }
 }
