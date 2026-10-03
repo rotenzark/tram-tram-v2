@@ -709,6 +709,15 @@ picture { display: block; }
   border: 3px solid var(--lavagna);
 }
 .galleria-due .g-foto img { aspect-ratio: 3 / 2; }
+/* gli oggetti per la tavola: Francesco con gli orci (verticale) e il collage (orizzontale), interi, senza tagli */
+.galleria-oggetti {
+  grid-template-columns: 2fr 3fr;
+  align-items: start;
+  margin-top: clamp(48px, 7vw, 84px);
+}
+.galleria-oggetti .g-foto img { aspect-ratio: auto; }
+.galleria-cucina { margin-top: 14px; }
+.g-foto img[src$="ritratto.jpg"] { object-position: 50% 15%; } /* il viso di Francesco, non il tavolo */
 .g-foto img[src$="tavolo.jpg"] { object-position: 50% 88%; } /* i tavoli, non il muro blu sopra */
 .g-foto figcaption {
   margin-top: 8px;
@@ -965,6 +974,7 @@ picture { display: block; }
 
   .galleria { grid-template-columns: 1fr 1fr; gap: 12px; }
   .galleria-due,
+  .galleria-oggetti,
   .recensioni,
   .mappa-riga { grid-template-columns: 1fr; }
   .where-azioni .btn { width: 100%; }
